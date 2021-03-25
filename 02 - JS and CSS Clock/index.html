@@ -67,6 +67,7 @@
 
       .second-hand {
         height: 2px;
+        background: white;
       }
       .hour-hand {
         width: 40%;
@@ -86,6 +87,14 @@
         
         const seconds = now.getSeconds();
         const secondsDegrees = ((seconds / 60) * 360) + 90;
+        //Check to remove transition once second hand reaches 0 and then add it back
+        //This removes the blip seeing the second hand go all the way back around from 360
+        if (seconds == 0) {
+          secondHand.style.transition = `none`;
+        }
+        if (seconds == 1) {
+          secondHand.style.transition = `all 0.05s`;
+        }
         secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
 
         const minutes = now.getMinutes();
