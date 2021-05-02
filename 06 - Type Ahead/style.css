@@ -1,6 +1,6 @@
     html {
       box-sizing: border-box;
-      background:#ffc600;
+      background:#F3F3F5 url(https://picsum.photos/id/511/1500/?blur=5);
       font-family:'helvetica neue';
       font-size: 20px;
       font-weight: 200;
@@ -67,5 +67,5 @@
     }
 
     .hl {
-      background:#ffc600;
+      background:#D3CD76;
     }
